@@ -1,49 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SA Prize Bot</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/normalize.css" />
-  </head>
-  <body>
-    <section class="heading-container">
-      <nav>
-        <div class="navbar-brand">
-          <img src="../images/logo.png" alt="logo" />
-        </div>
-        <div class="navbar-menu">
-          <ul>
-            <li>HOME</li>
-            <li>ACTION</li>
-            <li>ABOUT</li>
-          </ul>
-        </div>
-      </nav>
-    </section>
-    <section class="main-container">
-      <div class="main-text">
-        <h2>Try your luck</h2>
-      </div>
-      <div class="lootbox">
-        <img src="../images/lootbox.png" alt="" />
-      </div>
-      <!-- <div class="login-buttons">
-        <button class="signup-btn">Sign Up</button>
-        <button class="login-btn">Sign In</button>
-      </div> -->
-      <div class="spin-btn">
-        <button id="spin" name="spin" class="spin">SPIN</button>
-      </div>
-      <div class="view-port">
-        <div class="card-1"></div>
-        <div class="card-2"></div>
-        <div class="card-3"></div>
-        <div class="card-4"></div>
-        <div class="card-5"></div>
-      </div>
-    </section>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SA Prize Bot</title>
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="css/normalize.css" />
+	</head>
+	<body>
+		<section class="heading-container">
+			<nav>
+				<div class="navbar-brand">
+					<img src="./images/logo.png" alt="logo" />
+				</div>
+				<div class="navbar-menu">
+					<ul>
+						<li>HOME</li>
+						<li>ACTION</li>
+						<li>ABOUT</li>
+					</ul>
+				</div>
+			</nav>
+		</section>
+		<section class="main-container">
+			<div class="login-section hide">
+				<form id="login-form">
+					<div class="form-group">
+						<input
+							type="email"
+							id="email"
+							placeholder="Email"
+							class="form-control"
+						/>
+						<button type="submit" id="btn-login">Submit</button>
+					</div>
+				</form>
+			</div>
+			<div class="spin-section">
+				<div class="main-text">
+					<h2 id="feedback">Try your luck</h2>
+				</div>
+				<div class="lootbox">
+					<img
+						id="selectedImg"
+						style="width: 300px; height: 300px"
+						src="./images/lootbox.png"
+						alt=""
+					/>
+				</div>
+
+				<div class="spin-btn">
+					<button id="spin" name="spin" class="spin">SPIN</button>
+				</div>
+				<div class="view-port">
+					<div class="card-1"></div>
+					<div class="card-2"></div>
+					<div class="card-3"></div>
+					<div class="card-4"></div>
+					<div class="card-5"></div>
+				</div>
+			</div>
+		</section>
+
+		<script type="text/javascript" src="./script.js"></script>
+	</body>
 </html>

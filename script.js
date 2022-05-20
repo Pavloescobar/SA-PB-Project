@@ -9,7 +9,7 @@ const EMAIL_INPUT = document.querySelector("#email");
 const BTN_LOGIN = document.querySelector("#btn-login");
 const IMG = document.querySelector("#selectedImg");
 
-/// data for to be selected randomly when clicking on Spin button
+/// data to be selected randomly when clicking on Spin button
 const data = [
   { src: "kl-bag", value: 20 },
   { src: "kl-black-hoodie", value: 34 },
