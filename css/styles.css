@@ -94,3 +94,26 @@ ul li:hover {
   border: 3px solid rgb(205, 166, 50);
   border-radius: 5px;
 }
+
+.spin {
+  position: relative;
+  display: inline-block;
+  padding: 20px 40px;
+  border-radius: 4px;
+  color: rgb(140, 207, 40);
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  margin: 15px;
+  background-color: rgb(20, 24, 20);
+  border: 2px solid #d2bdff;
+  letter-spacing: 3px;
+}
+
+.spin:hover {
+  border: 1px solid transparent;
+  color: rgb(252, 239, 0);
+  font-size: 18px;
+  cursor: pointer;
+  border: 2px solid #d2bdff;
+}
