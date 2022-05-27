@@ -83,11 +83,18 @@ BTN_SPIN.addEventListener("click", async function () {
         "Content-Type": "application/x-www-form-urlencoded",
       },
       body: new URLSearchParams({
-        data: `{"token": "RRftKA", "event": "Won Prize", "customer_properties": {"$email": "${localStorage.getItem(
-          "auth"
-        )}","$image":"${selectedImage}"}, "properties": {"item_name": "${
-          selectedItem.name
-        }","$value": ${Number(selectedItem.price)}}}`,
+        data: `{
+          "token": "RRftKA", 
+          "event": "Won Prize",
+          "customer_properties": {
+              "$email": "${localStorage.getItem("auth")}"
+          }, 
+          "properties": {
+              "item_name": "${selectedItem.name}",
+              "prize_image": "${selectedImage}",
+              "$value": ${Number(selectedItem.price)}
+          }
+      }`,
       }),
     };
 
