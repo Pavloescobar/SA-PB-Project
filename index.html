@@ -1,74 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>SA Prize Bot</title>
-		<link rel="stylesheet" href="css/styles.css" />
-		<link rel="stylesheet" href="css/normalize.css" />
-	</head>
-	<body>
-		<section class="heading-container">
-			<nav>
-				<div class="navbar-brand">
-					<img src="./images/logo.png" alt="logo" />
-				</div>
-				<div class="navbar-menu">
-					<ul>
-						<li>HOME</li>
-						<li>ACTION</li>
-						<li>ABOUT</li>
-					</ul>
-				</div>
-			</nav>
-		</section>
-		<section class="main-container">
-			<div class="login-section hide">
-				<form id="login-form">
-					<div class="form-group">
-						<input
-							type="email"
-							id="email"
-							placeholder="Email"
-							class="form-control"
-						/>
-						<button type="submit" id="btn-login">Submit</button>
-					</div>
-				</form>
-			</div>
-			<div class="spin-section">
-				<div class="main-text">
-					<h2 id="feedback">Try your luck</h2>
-				</div>
-				<div class="lootbox">
-					<img
-						id="selectedImg"
-						style="width: 300px; height: 300px"
-						src="./images/lootbox.png"
-						alt=""
-					/>
-					<h3 id="product-name"></h3>
-				</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SA Prize Bot</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+  </head>
+  <body>
+    <section class="heading-container">
+      <nav>
+        <div class="navbar-brand">
+          <img src="./images/logo.png" alt="logo" />
+        </div>
+        <div class="navbar-menu">
+          <ul>
+            <li>HOME</li>
+            <li>ACTION</li>
+            <li><a href="#about">ABOUT</a></li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+    <section class="main-container">
+      <div id="config">
+        <form id="config-form">
+          <label>
+            API Key
+            <input type="text" placeholder="api key" id="apiKey" />
+          </label>
+          <label
+            >API Secret
+            <input type="text" placeholder="api secret" id="apiSecret" />
+          </label>
+          <button class="submit" type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="login-section hide">
+        <form id="login-form">
+          <div class="form-group">
+            <input
+              type="email"
+              id="email"
+              placeholder="Email"
+              class="form-control"
+            />
+            <button class="submit" type="submit" id="btn-login">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div class="spin-section">
+        <div class="main-text">
+          <h2 id="feedback">Try your luck</h2>
+        </div>
+        <div class="lootbox">
+          <img
+            id="selectedImg"
+            style="width: 300px; height: 300px"
+            src="./images/lootbox.png"
+            alt=""
+          />
+          <h3 id="product-name"></h3>
+        </div>
 
-				<div class="spin-btn">
-					<button id="spin" name="spin" class="spin">SPIN</button>
-				</div>
-				<div class="view-port">
-					<div class="card-1"></div>
-					<div class="card-2"></div>
-					<div class="card-3"></div>
-					<div class="card-4"></div>
-					<div class="card-5"></div>
-				</div>
-			</div>
-		</section>
-		<script
-			async
-			type="text/javascript"
-			src="//static.klaviyo.com/onsite/js/klaviyo.js?company_id=RRftKA"
-		></script>
+        <div class="spin-btn">
+          <button id="spin" name="spin" class="spin">SPIN</button>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="about">
+      <div id="about">
+        <h1>About Section</h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, quis
+        omnis in minima nihil, dolores perspiciatis deserunt ratione ipsam
+        delectus facilis sapiente, magni tempora sunt officia voluptatem error
+        aperiam enim. Eos est nemo et modi nihil explicabo magni totam qui
+        dolores autem possimus rem nisi assumenda aut optio eveniet quia
+        cupiditate, dolor dolorem iste expedita. Totam debitis est optio illum!
+        Nam eius tenetur consequuntur a id eum assumenda similique, quisquam
+        ratione dolorem consequatur ex dolores deleniti reprehenderit odio ea
+        illum consectetur eos perferendis! Magnam at cupiditate quasi neque,
+        tenetur aliquam. Ratione facilis perferendis magnam praesentium, non
+        possimus, perspiciatis animi ducimus laudantium impedit tempore
+        nesciunt. Minus placeat iure dignissimos sequi, quod unde earum
+        praesentium, aut reprehenderit deleniti voluptatum ducimus quo adipisci?
+        Voluptatibus, necessitatibus, illum voluptas laudantium velit atque
+        culpa soluta ratione aliquam voluptatum amet. Sed, placeat natus atque
+        voluptatem rem dolorum consectetur quos, cum repellendus quo at illum
+        pariatur saepe mollitia.
+      </div>
+    </section> -->
 
-		<script type="text/javascript" src="./script.js"></script>
-	</body>
+    <script
+      async
+      type="text/javascript"
+      src="//static.klaviyo.com/onsite/js/klaviyo.js?company_id=RRftKA"
+    ></script>
+    <script type="text/javascript" src="./refs.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
+  </body>
 </html>
