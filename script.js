@@ -26,7 +26,7 @@ CONFIG_FORM.addEventListener("submit", async function (event) {
   products = [...returnedData];
 });
 
-// added a general function to to do data request and catch data back
+// added a general function to perform data request and catch data back
 async function apiCall(url, body) {
   const options = {
     method: "POST",
@@ -41,7 +41,7 @@ async function apiCall(url, body) {
   return returnedData;
 }
 
-// commented  the keys and secrete as we are getting it from user
+// commented  the keys and secret as we are getting it from user
 
 // const apiKeyConsumer = `ck_8852c711cef4ad17f4ad29b1d47cc244158c89c9`;
 // const apiKeySecret = `cs_6ff05576b7061595dcaddea31de7f4c57bf1012c`;
@@ -88,10 +88,11 @@ BTN_SPIN.addEventListener("click", async function () {
     const selectedItem = products[random];
 
     // composing request object and config for sending request to api
+    // interpolating the pulbic api key
 
     const body = new URLSearchParams({
       data: `{
-				"token": "RRftKA", 
+				"token": "${KL_PUBLIC_API}", 
 				"event": "Won Prize",
 				"customer_properties": {
 					"$email": "${localStorage.getItem("auth")}"
@@ -129,14 +130,14 @@ LOGIN_FORM.addEventListener("submit", async function (e) {
   /// request sending config again
 
   const body = new URLSearchParams({
-    data: `{"token": "RRftKA","properties": {"$email":"${EMAIL_INPUT.value}"}}`,
+    data: `{"token": "${KL_PUBLIC_API}","properties": {"$email":"${EMAIL_INPUT.value}"}}`,
   });
 
   // making api call to indentify the user
   const result = await apiCall("https://a.klaviyo.com/api/identify", body);
 
   BTN_LOGIN.innerHTML = "Submit";
-
+  console.log(result);
   // if success saving email in local storage, hiding login form section and showing spin section
   if (result === 1) {
     localStorage.setItem("auth", EMAIL_INPUT.value);
